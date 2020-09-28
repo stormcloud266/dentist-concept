@@ -2,11 +2,10 @@
 
 // 600px
 @mixin whenMedium() {
-  @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
+  @media only screen and (min-width: 37.5em) {
       @content;
   }
 }
-
 
 // 900px
 @mixin whenLarge() {

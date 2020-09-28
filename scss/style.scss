@@ -13,7 +13,11 @@
 @import 'base/typography';
 @import 'base/utilities';
 
-@import 'components/blog';
+@import 'layout/wrapper';
+@import 'layout/flex';
+@import 'layout/section';
+
+// @import 'components/blog';
 @import 'components/button';
 @import 'components/card';
 @import 'components/doctor-card';
@@ -21,19 +25,9 @@
 @import 'components/form';
 @import 'components/header';
 
-@import 'layout/wrapper';
-@import 'layout/flex';
-@import 'layout/grid';
-@import 'layout/section';
-
 @import 'pages/home/hero';
 @import 'pages/home/intro';
 @import 'pages/home/benefits';
 @import 'pages/home/doctors';
 @import 'pages/home/services';
 @import 'pages/home/testimonials';
-
-hr {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-}
