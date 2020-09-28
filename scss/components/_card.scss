@@ -1,9 +1,7 @@
 .card {
-  padding: $p-11 $p-8;
-  box-shadow: 0 3px 20px -2px rgba($color-blue-medium, .2);
-  margin-bottom: $p-9;
-  max-width: 48rem;
-  border-radius: 10px;
+  
+  @include cardDefault;
+
   &__icon {
     max-width: 48px;
     margin-bottom: $p-6;

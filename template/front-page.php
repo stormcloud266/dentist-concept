@@ -8,7 +8,7 @@ $doctors = get_field('doctors');
 $services = get_field('services');
 $testimonials = get_field('testimonials');
 
-// echo '<pre>'; print_r($benefits); echo '</pre>';
+// echo '<pre>'; print_r($doctors); echo '</pre>';
 
 ?>
 
@@ -86,24 +86,53 @@ $testimonials = get_field('testimonials');
 
 
 
-<hr>
-<!-- benefits -->
+
+<!-- doctors -->
+
+<section class="section wrapper doctors">
+
+  <p class="accent-text">
+    <?php echo esc_attr( $doctors['accent_text'] ); ?>
+  </p>
+
+  <h2 class="doctors__title">
+    <?php echo esc_attr( $doctors['main_title'] ); ?>
+  </h2>
+
+  <div class="flex flex--3 doctors__cards">
+
+  <?php
+    $doctor_cards = $doctors['cards'];
+    foreach($doctor_cards as $doctor_card) { ?>
+      <div class="doctor-card">
+
+        <div class="doctor-card__picture" style="background-image: url('<?php echo esc_url($doctor_card["picture"]["sizes"]["large"]) ?>')"></div>
+
+        <div class="doctor-card__text">
+
+          <div class="doctor-card__position">
+            <p>
+              <?php echo esc_attr( $doctor_card["position"] ); ?>
+            </p>
+          </div>
+
+          <h3 class="doctor-card__title">
+          <?php echo esc_attr( $doctor_card["full_name"] ); ?>
+          </h3>
+
+          <p class="doctor-card__body">
+            <?php echo esc_attr( $doctor_card["info"] ); ?>
+          </p>
+        </div>
+        
+      </div>
+   <?php } ?>
+
+  </div>
+
+</section>
 
 
-<p><?php echo $doctors['accent_text']; ?></p>
-<h2><?php echo $doctors['main_title']; ?></h2>
-
-<?php
-
-$doctor_cards = $doctors['cards'];
-foreach($doctor_cards as $card) {
-    echo $card["position"];
-    echo $card["full_name"];
-    echo $card["info"];
-    echo $card["picture"]["url"];
-  }?>
-
-<hr>
   <!-- services -->
 
 

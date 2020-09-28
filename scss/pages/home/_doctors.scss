@@ -1,0 +1,9 @@
+.doctors {
+  text-align: center;
+
+  &__title {
+    margin: 0 auto $p-10;
+    max-width: 50rem;
+  }
+
+}

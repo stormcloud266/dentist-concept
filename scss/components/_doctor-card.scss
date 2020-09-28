@@ -1,0 +1,44 @@
+.doctor-card {
+  @include cardDefault;
+  padding: 0;
+  max-width: 40rem;
+
+  &__picture {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__text {
+    padding: 0 $p-8 $p-11;
+    position: relative;
+  }
+
+  &__position {
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+
+    p {
+      padding: $p-0 $p-7;
+      background-color: $color-blue-medium;
+      color: white;
+      border-radius: 50px;
+      display: inline-block;
+    }
+  }
+
+  &__title {
+    padding-top: $p-11;
+    padding-bottom: $p-4;
+  }
+
+  @include whenLarge {
+    margin-bottom: 0;
+  }
+
+}

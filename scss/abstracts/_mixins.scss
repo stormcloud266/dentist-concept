@@ -2,7 +2,7 @@
 
 // 600px
 @mixin whenMedium() {
-  @media only screen and (min-width: 37.5em) {
+  @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
       @content;
   }
 }
@@ -13,4 +13,13 @@
   @media only screen and (min-width: 56.25em) {
       @content;
   }
+}
+
+@mixin cardDefault() {
+  padding: $p-11 $p-8;
+  box-shadow: 0 3px 20px -2px rgba($color-blue-medium, .2);
+  margin-bottom: $p-9;
+  max-width: 48rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
