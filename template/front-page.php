@@ -8,13 +8,13 @@ $doctors = get_field('doctors');
 $services = get_field('services');
 $testimonials = get_field('testimonials');
 
-// echo '<pre>'; print_r($doctors); echo '</pre>';
+// echo '<pre>'; print_r($benefits); echo '</pre>';
 
 ?>
 
 <!-- hero -->
 
-<div class="wrapper wrapper--sm-on-md hero">
+<section class="wrapper wrapper--sm-on-md hero" role="banner">
 
   <div class="hero__image">
     <img src="<?php echo esc_url( $hero['image']['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $hero['image']['alt'] ); ?>">
@@ -30,13 +30,13 @@ $testimonials = get_field('testimonials');
     </div>
   </div>
 
-</div>
+</section>
 
 
 
 <!-- intro -->
 
-<div class="section flex flex--2 wrapper wrapper--sm-on-md intro">
+<section class="section flex flex--2 wrapper wrapper--sm-on-md intro">
   
   <div class="intro__image">
     <img 
@@ -51,26 +51,39 @@ $testimonials = get_field('testimonials');
     <?php echo $intro['body']; ?>
   </div>
 
-</div>
+</section>
 
 
 
 <!-- benefits -->
 
+<section class="wrapper benefits">
+  <p class="accent-text"><?php echo esc_attr( $benefits['accent_text'] ); ?></p>
+  <h2 class="benefits__title"><?php echo esc_attr( $benefits['main_title'] ); ?></h2>
 
-<p><?php echo $benefits['accent_text']; ?></p>
-<h2><?php echo $benefits['main_title']; ?></h2>
+  <div class="flex flex--3 benefits__cards">
 
-<?php
+  <?php
+    $cards = $benefits['cards'];
+    foreach($cards as $card) { ?>
+      <div class="card">
+        <img src="<?php echo esc_url($card["icon"]["sizes"]["medium"]) ?>" alt="" class="card__icon">
+        <h3 class="card__title"><?php echo esc_attr( $card["card_title"] ); ?></h3>
+        <p class="card__body"><?php echo esc_attr( $card["card_body"] ); ?></p>
+      </div>
+   <?php } ?>
 
-$cards = $benefits['cards'];
-foreach($cards as $card) {
-    echo $card["card_title"];
-    echo $card["card_body"];
-    echo $card["icon"]["url"];
-  }?>
+  </div>
 
-<a href="<?php echo $benefits['link']['url']; ?>"><?php echo $benefits['link']['title']; ?></a>
+  <a 
+  href="<?php echo esc_url( $benefits['link']['url'] ); ?>"
+  class="btn btn--cta"
+  >
+    <?php echo esc_attr( $benefits['link']['title'] ); ?>
+  </a>
+</section>
+
+
 
 
 <hr>

@@ -2,13 +2,14 @@
 
   &__image {
     margin-bottom: $p-9;
-    
+
     img {
       border-radius: 10px;
     }
   }
 
   @include whenLarge {
+    align-items: center;
 
     &__image {
       margin-bottom: 0;
