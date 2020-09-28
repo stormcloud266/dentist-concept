@@ -1,7 +1,7 @@
 // colors
-$color-text-0: #000000;
+$color-text-0: #25404F;
 $color-text-1: #222222;
-$color-text-2: #444444;
+$color-text-2: #5F7682;
 $color-text-3: #666666;
 $color-text-4: #888888;
 $color-text-5: #BBBBBB;
@@ -12,18 +12,23 @@ $color-bg-0: #FFFFFF;
 $color-bg-1: #F1F1F1;
 $color-bg-dark: #222222;
 
-$color-cta: darkred;
+$color-cta: #318787;
+
+$color-blue-light: #F5F9FB;
+$color-blue-medium: #258BC7;
+$color-blue-gray: #758E9B;
+
+$color-gradient: linear-gradient(60deg, #35B7B7, #258BC7);
 
 $link-color: #0d83a0;
 $link-highlight-color: lighten($link-color, 20%);
 
 
 // fonts
-$font-header: Arial, sans-serif;
-$font-body: Tahoma, serif;
+$font: "Poppins", sans-serif;
 
-$font-0: 1.6rem;
-$font-1: 1.8rem;
+$font-0: 1.5rem;
+$font-1: 1.7rem;
 $font-2: 2.1rem;
 $font-3: 2.6rem;
 $font-4: 3.1rem;
