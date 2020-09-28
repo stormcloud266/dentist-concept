@@ -1,0 +1,40 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  // background-image: resolve('homepage-hero.jpg');
+  background-size: cover;
+  background-position: right center;
+
+  &--sm { min-height: 500px; }
+
+  &__inner { padding-top: 70px; }
+
+  &__text {
+    max-width: 560px;
+    
+    h1 {
+      margin-bottom: $p-4;
+      text-shadow: 2px 2px 0px white;
+    }
+    p {
+      margin-bottom: $p-10;
+      text-shadow: 1px 1px 0px white;
+    }
+  }
+
+  &--light &__text {
+    h1 {
+      color: white;
+      text-shadow: 2px 2px $color-blue-3;
+
+    }
+    p {
+      color: white;
+      text-shadow: 1px 1px $color-text-2;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.cta-banner {
+  background-image: linear-gradient(rgba($color-cta, .8), rgba($color-cta, .8)), resolve("braces-bw.png");
+  background-size: cover;
+  background-position: center right;
+
+  .button--solid {
+    color: $color-cta;
+  }
+
+  .button:hover {
+    color: white;
+    background-color: $color-cta;
+  }
+}

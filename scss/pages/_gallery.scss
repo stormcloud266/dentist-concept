@@ -1,0 +1,45 @@
+// .gallery {
+//   li {
+//     max-width: 400px;
+//     max-height: 300px;
+//     display: block;
+//     // overflow: hidden;
+//     line-height: 1;
+//   }
+//   a {
+//     height: 100%;
+//   }
+//   img {
+//     display: block;
+//     min-width: 100%;
+//     min-height: 100%;
+//     width: auto;
+//     height: auto;
+//   }
+// }
+.gallery {
+  li {
+    height: 300px;
+    overflow: hidden;
+  }
+  a {
+    height: 300px;
+  }
+  img {
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  @include whenMedium {
+    &.grid--collapse-md {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @include whenSmall{
+    &.grid--collapse-md {
+      grid-template-columns: 1fr;
+    }
+  }
+}

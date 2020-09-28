@@ -1,0 +1,119 @@
+.header-global {
+  background-color: white;
+  padding-top: $p-4;
+  padding-bottom: $p-4;
+  box-shadow: 0px 1px 10px -1px rgba(#000, .2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+
+    li {
+      margin-left: $p-7;
+    }
+    a {
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      color: $color-blue-3;
+    }
+
+    // CTA styling
+    li:last-child a {
+      display: inline-block;
+      background-color: $color-cta;
+      border-radius: 3px;
+      color: white;
+      padding: $p-3 $p-6;
+      transition: background-color .3s;
+
+      &:hover {
+        background-color: darken($color-cta, 10%);
+      }
+    }
+  }
+
+  // hide mobile menu toggle on desktop
+  #mobile-toggle, 
+  #mobile-toggle-label {
+    display: none;
+  }
+
+  @include whenMedium {
+    // show mobile menu toggle on mobile
+    #mobile-toggle, 
+    #mobile-toggle-label {
+      display: inline;
+    }
+
+    // hide checkbox offscreen
+    #mobile-toggle {
+      position: absolute;
+      left: -9999999px;
+    }
+
+    #mobile-toggle-label .close {
+      display: none;
+    }
+
+    #mobile-toggle-label {
+      padding: $p-0 $p-3;
+      font-size: 22px;
+      color: $color-blue-3;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    // add focus styles to label when toggle is focused 
+    #mobile-toggle:focus + #mobile-toggle-label {
+      background-color: $color-blue-1;
+    }
+
+
+    &__nav {
+      position: relative;
+      // z-index: 200;
+      background-color: white;
+    }
+
+    .menu-main-menu-container {
+      display: none;
+      position: absolute;
+      top: 100%; right: 0; left: 0;
+    }
+
+    .menu {
+      flex-direction: column;
+      background-color: white;
+      margin-top: $p-4;
+      padding: $p-8;
+      z-index: -10;
+      box-shadow: 0px 10px 10px -10px rgba(#000, .2);
+      text-align: center;
+
+      li { margin-bottom: $p-8; }
+
+      a { 
+        font-size: $font-0;
+        padding: $p-3 $p-8;
+      }
+
+    }
+
+    #mobile-toggle:checked ~ .menu-main-menu-container { display: block; }
+    #mobile-toggle:checked ~ #mobile-toggle-label .open { display: none; }
+    #mobile-toggle:checked ~ #mobile-toggle-label .close { display: block; }
+  }
+}
