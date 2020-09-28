@@ -47,7 +47,7 @@ $testimonials = get_field('testimonials');
 
   <div class="text-block intro__text">
     <p class="accent-text"><?php echo esc_attr( $intro['accent_text'] ); ?></p>
-    <h2><?php echo esc_attr( $intro['title'] ); ?></h2>
+    <h2 class="intro__title"><?php echo esc_attr( $intro['title'] ); ?></h2>
     <?php echo $intro['body']; ?>
   </div>
 
@@ -59,7 +59,7 @@ $testimonials = get_field('testimonials');
 
 <section class="wrapper benefits">
   <p class="accent-text"><?php echo esc_attr( $benefits['accent_text'] ); ?></p>
-  <h2 class="benefits__title"><?php echo esc_attr( $benefits['main_title'] ); ?></h2>
+  <h2 class="title-center"><?php echo esc_attr( $benefits['main_title'] ); ?></h2>
 
   <div class="flex flex--3 benefits__cards">
 
@@ -95,7 +95,7 @@ $testimonials = get_field('testimonials');
     <?php echo esc_attr( $doctors['accent_text'] ); ?>
   </p>
 
-  <h2 class="doctors__title">
+  <h2 class="title-center">
     <?php echo esc_attr( $doctors['main_title'] ); ?>
   </h2>
 
@@ -133,20 +133,38 @@ $testimonials = get_field('testimonials');
 </section>
 
 
-  <!-- services -->
+<!-- services -->
+
+<section class="section wrapper services">
+  <p class="accent-text"><?php echo esc_attr( $services['accent_text'] ); ?></p>
+  <h2 class="title-center"><?php echo esc_attr( $services['main_title'] ); ?></h2>
+
+  <ul class="services__list">
+  <?php
+
+    $services_items = $services['cards'];
+    foreach($services_items as $item) { ?>
+        
+        <li class="services__item">
+          
+          <div class="image-container">
+            <img src="<?php echo esc_url( $card["icon"]["sizes"]["medium"] ); ?>" alt="">
+          </div>
+
+          <div class="services__text">
+            <h3><?php echo esc_attr( $card["card_title"] ); ?></h3>
+            <p><?php echo esc_attr( $card["card_body"] ); ?></p>
+          </div>
+        </li>
+
+    <?php } ?>
+  </ul>
+
+</section>
 
 
-<p><?php echo $services['accent_text']; ?></p>
-<h2><?php echo $services['main_title']; ?></h2>
 
-<?php
 
-$services_cards = $services['cards'];
-foreach($services_cards as $card) {
-    echo $card["icon"]["url"];
-    echo $card["card_title"];
-    echo $card["card_body"];
-  }?>
 
 
 <hr>

@@ -41,6 +41,11 @@ p.accent-text {
   }
 }
 
+.title-center {
+  margin: 0 auto $p-10;
+  max-width: 50rem;
+}
+
 .icon {
   min-width: 48px;
   min-height: 48px;

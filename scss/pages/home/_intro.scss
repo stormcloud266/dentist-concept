@@ -8,6 +8,10 @@
     }
   }
 
+  &__title {
+    max-width: 50rem;
+  }
+
   @include whenLarge {
     align-items: center;
 

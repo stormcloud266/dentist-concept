@@ -1,0 +1,50 @@
+.services {
+  text-align: center;
+
+  &__list {
+    text-align: left;
+    display: grid;
+    justify-content: center;
+    row-gap: $p-9;
+  }
+
+  &__item {
+    display: flex;
+    max-width: 48rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .image-container {
+      min-width: 48px;
+      max-width: 48px;
+      margin-right: $p-6;
+    }
+    h3 {
+      margin-bottom: $p-3;
+    }
+    p {
+      font-size: $font-0;
+    }
+  }
+
+  @include whenMedium {
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $p-3;
+    }
+
+  }  // end of whenMedium
+
+  @include whenLarge {
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: $p-7;
+    }
+    
+  }  // end of whenMedium
+}
