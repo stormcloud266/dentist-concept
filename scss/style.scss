@@ -4,39 +4,23 @@
     Version: 1.0
 */
 
-@import './global/variables';
-@import './global/global';
-@import './global/helpers';
-@import './global/layout';
-@import './global/animations';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-@import './elements/button';
-@import './elements/form';
-@import './elements/headers';
-@import './elements/image';
-@import './elements/link';
-@import './elements/list';
-@import './elements/text';
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
 
-@import './components/header';
-@import './components/nav';
-@import './components/footer';
-@import './components/blog';
-@import './components/hero';
-@import './components/services';
-@import './components/fw-img-text';
-@import './components/cards';
-@import './components/cta-banner';
-@import './components/skip';
+@import 'components/blog';
+@import 'components/button';
+@import 'components/footer';
+@import 'components/form';
+@import 'components/header';
+@import 'components/nav';
 
-@import './pages/gallery';
-@import './pages/service';
-@import './pages/contact-form';
-@import './pages/blog-article';
-@import './pages/homepage-intro';
-@import './pages/testimonials-featured';
-@import './pages/testimonials-cards';
-
-img {
-	max-width: 300px;
-}
+@import 'layout/flex';
+@import 'layout/grid';
+@import 'layout/section';
+@import 'layout/wrapper';

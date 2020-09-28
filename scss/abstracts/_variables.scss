@@ -1,29 +1,26 @@
-
 // colors
-$color-text-0: #242727;
-$color-text-1: #465658;
+$color-text-0: #000000;
+$color-text-1: #222222;
 $color-text-2: #444444;
 $color-text-3: #666666;
 $color-text-4: #888888;
-$color-text-5: #e1e8e8;
-$color-text-6: #f7feff;
+$color-text-5: #BBBBBB;
+$color-text-6: #DDDDDD;
 $color-text-7: #FFFFFF;
 
 $color-bg-0: #FFFFFF;
-$color-bg-1: #f1f7f9;
+$color-bg-1: #F1F1F1;
+$color-bg-dark: #222222;
 
-$color-cta: #bb5934;
+$color-cta: darkred;
 
-$color-blue-1: #C2D9DB;
-$color-blue-2: #3C7A84;
-$color-blue-3: #3C7A84;
-$color-blue-4: #425B5F;
-$color-blue-5: #2a3638;
+$link-color: #0d83a0;
+$link-highlight-color: lighten($link-color, 20%);
 
 
 // fonts
-$font-header: 'Montserrat', Arial, sans-serif;
-$font-body: 'Open Sans', Tahoma, serif;
+$font-header: Arial, sans-serif;
+$font-body: Tahoma, serif;
 
 $font-0: 1.6rem;
 $font-1: 1.8rem;
@@ -35,6 +32,7 @@ $font-6: 4.4rem;
 
 
 // spacing
+
 $p-0: .5rem;
 $p-1: .8rem;
 $p-2: 1rem;
@@ -49,3 +47,6 @@ $p-10: 5.4rem;
 $p-11: 6.4rem;
 $p-12: 7.7rem;
 $p-13: 9.2rem;
+
+$gap-flex: $p-7;
+$gap-flex-sm: $p-4;
