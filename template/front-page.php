@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 front page!
 
-<!-- hero -->
 <?php
 $hero = get_field('hero');
 $intro = get_field('intro');
@@ -14,10 +13,22 @@ $testimonials = get_field('testimonials');
 
 ?>
 
-<h1><?php echo $hero['title']; ?></h1>
-<p><?php echo $hero['subtitle']; ?></p>
-<img src="<?php echo $hero['image']['sizes']['large']; ?>" alt="<?php echo $hero['image']['alt']; ?>">
-<?php get_footer(); ?>
+<!-- hero -->
+
+<div class="wrapper hero">
+  <div class="hero__text">
+    <h1><?php echo esc_attr( $hero['title'] ); ?></h1>
+    <p><?php echo esc_attr( $hero['subtitle'] ); ?></p>
+  </div>
+
+  <div class="hero__image">
+    <img src="<?php echo esc_url( $hero['image']['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $hero['image']['alt'] ); ?>">
+  </div>
+</div>
+
+
+
+
 
 <hr><hr>
 

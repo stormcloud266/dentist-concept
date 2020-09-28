@@ -1,9 +1,9 @@
 .section {
-  padding-top: 14rem;
-  padding-bottom: 14rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
-.section-top { padding-top: 14rem; }
-.section-bottom { padding-bottom: 14rem; }
+.section-top { padding-top: 8rem; }
+.section-bottom { padding-bottom: 8rem; }
 
 @include whenMedium {
   .section {
@@ -14,11 +14,11 @@
   .section-bottom { padding-bottom: 10rem; }
 }
 
-@include whenSmall {
+@include whenLarge {
   .section {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
   }
-  .section-top { padding-top: 8rem; }
-  .section-bottom { padding-bottom: 8rem; }
+  .section-top { padding-top: 14rem; }
+  .section-bottom { padding-bottom: 14rem; }
 }

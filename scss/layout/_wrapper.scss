@@ -7,5 +7,10 @@
   margin-right: auto;
 
   &--sm { max-width: 60rem; }
-  &--sm-on-md { @include whenMedium { max-width: 60rem; } }
+  
+  &--sm-on-md { 
+    @include whenMedium { 
+      max-width: 60rem; 
+    } 
+  }
 }
