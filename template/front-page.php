@@ -163,24 +163,47 @@ $testimonials = get_field('testimonials');
 </section>
 
 
+<!-- testimonials -->
+
+<section class="testimonials">
+
+  <div class="testimonials__image" style="background-image: url('<?php echo esc_attr( $testimonials["image"]["sizes"]["large"] ); ?>')"></div>
+
+  <div class="testimonials__right">
+    <div class="text-block testimonials__text">
+
+      <h2><?php echo esc_attr( $testimonials['title'] ); ?></h2>
+
+      <?php
+
+      $testimonial_collection = $testimonials['testimonial'];
+      foreach($testimonial_collection as $testimonial) { ?>
+        <div class="testimonials__testimonial">
+
+          <p class="testimonials__body">
+            <?php echo esc_attr( $testimonial["body"] ); ?>
+          </p>
+
+          <p class="testimonials__name">
+            <?php echo esc_attr( $testimonial["name"] ); ?>
+          </p>
+
+        </div>
+      <?php } ?>
+
+      <div class="testimonials__buttons">
+        <button>&lt;</button>
+        ...
+        <button>&gt;</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
-
-
-<hr>
-
-  <!-- testimonials -->
-
-
-<h2><?php echo $testimonials['title']; ?></h2>
-
-<?php
-
-$testimonial_collection = $testimonials['testimonial'];
-foreach($testimonial_collection as $testimonial) {
-    echo $testimonial["body"];
-    echo $testimonial["name"];
-  }?>
+<div class="section"></div>
 
 
 <?php get_footer(); ?>
