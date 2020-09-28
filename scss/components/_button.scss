@@ -2,22 +2,26 @@ $buttonColor: white;
 $ctaColor: $color-cta;
 
 
-button, .button {
-  padding: $p-0 $p-6;
+button, .btn {
+  padding: $p-3 $p-8;
   cursor: pointer;
   color: $color-text-1;
   background-color: $buttonColor;
-  border-radius: 3px;
+  border-radius: 50px;
   border: 1px solid $color-text-5;
   display: inline-block;
 }
 
-.button {
+.btn {
   &--cta {
     border-color: $ctaColor;
     background-color: $ctaColor;
+    color: white;
     transition: border-color .3s, background-color .3s;
+    box-shadow: 0 3px 12px -2px rgba($ctaColor, .4);
+
     &:hover {
+      color: white;
       border-color: darken($ctaColor, 10%);
       background-color: darken($ctaColor, 10%);
     }

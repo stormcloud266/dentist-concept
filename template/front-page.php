@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-front page!
 
 <?php
 $hero = get_field('hero');
@@ -15,15 +14,22 @@ $testimonials = get_field('testimonials');
 
 <!-- hero -->
 
-<div class="wrapper hero">
-  <div class="hero__text">
-    <h1><?php echo esc_attr( $hero['title'] ); ?></h1>
-    <p><?php echo esc_attr( $hero['subtitle'] ); ?></p>
-  </div>
+<div class="wrapper wrapper--sm-on-md hero">
 
   <div class="hero__image">
     <img src="<?php echo esc_url( $hero['image']['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $hero['image']['alt'] ); ?>">
   </div>
+
+  <div class="text-block hero__text">
+    <h1><?php echo esc_attr( $hero['title'] ); ?></h1>
+    <p><?php echo esc_attr( $hero['subtitle'] ); ?></p>
+
+    <div class="hero__buttons">
+      <a href="/" class="btn btn--cta">Book Now</a>
+      <a href="/">Learn More &rarr;</a>
+    </div>
+  </div>
+
 </div>
 
 

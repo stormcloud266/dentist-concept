@@ -2,7 +2,7 @@
 
 function load_files() {
   wp_enqueue_style( 'main_styles', get_stylesheet_uri() );
-  wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swa' );
+  wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swa' );
   wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/da6ddca0ed.js' );
 }
 

@@ -1,11 +1,52 @@
 .hero {
   display: flex;
-  align-items: center;
-  
+  flex-direction: column;
+
+  padding-top: $p-9;
+  padding-bottom: $p-9;
+  text-align: center;
 
   &__image {
+    margin-bottom: $p-8;
+
     img {
-      max-width: 600px;
+      max-width: 40rem;
     }
   }
+  
+  &__text h1 {
+    font-size: $font-5;
+  }
+
+  &__buttons .btn {
+    margin-right: $p-4;
+  }
+
+  @include whenLarge {
+    flex-direction: row;
+    align-items: center;
+
+    padding-top: $p-11;
+    padding-bottom: $p-11; 
+    text-align: left;
+
+    &__image,
+    &__text {
+      flex: 1
+    }
+
+    &__text h1 {
+      font-size: $font-6;
+    }
+
+    &__image {
+      order: 2;
+      margin-bottom: 0;
+
+      img {
+        max-width: 60rem;
+      }
+    }
+  } // end of whenLarge
+
 }
