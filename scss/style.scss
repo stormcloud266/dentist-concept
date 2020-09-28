@@ -19,9 +19,15 @@
 @import 'components/form';
 @import 'components/header';
 
+@import 'layout/wrapper';
 @import 'layout/flex';
 @import 'layout/grid';
 @import 'layout/section';
-@import 'layout/wrapper';
 
 @import 'pages/home/hero';
+@import 'pages/home/intro';
+
+hr {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}

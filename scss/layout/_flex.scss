@@ -54,3 +54,19 @@
 //     .flex--order-2 { order: 2; }
 //   }
 // }
+
+.flex {
+  
+
+  @include whenLarge {
+    display: flex;
+
+    & > * {
+      flex: 1;
+    }
+
+    &--2 > *:first-child {
+      margin-right: $p-8;
+    }
+  }
+}

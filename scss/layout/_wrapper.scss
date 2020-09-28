@@ -1,5 +1,6 @@
 .wrapper {
   width: 100%;
+  max-width: 100%;
   padding-left: $p-5;
   padding-right: $p-5;
   margin-left: auto;
@@ -7,11 +8,12 @@
 
   &--sm { max-width: 60rem; }
   
-  &--sm-on-md { 
-    @include whenMedium { 
+  
+  @include whenMedium { 
+    &--sm-on-md { 
       max-width: 60rem; 
-    } 
-  }
+    }
+  } 
 
   @include whenLarge {
     &,

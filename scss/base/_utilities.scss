@@ -29,6 +29,18 @@
 .text-left   { text-align: left; }
 .text-uppercase { text-transform: uppercase; }
 
+p.accent-text {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: $color-blue-dark;
+  font-weight: 700;
+  font-size: $font-0;
+  
+  & + h2 {
+    padding-top: $p-0;
+  }
+}
+
 .icon {
   min-width: 48px;
   min-height: 48px;

@@ -1,0 +1,18 @@
+.intro {
+
+  &__image {
+    margin-bottom: $p-9;
+    
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  @include whenLarge {
+
+    &__image {
+      margin-bottom: 0;
+    }
+
+  } // end of whenLarge
+}

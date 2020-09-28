@@ -34,20 +34,26 @@ $testimonials = get_field('testimonials');
 
 
 
-
-
-<hr><hr>
-
-
 <!-- intro -->
 
-<p><?php echo $intro['accent_text']; ?></p>
-<h2><?php echo $intro['title']; ?></h2>
-<p><?php echo $intro['body']; ?></p>
+<div class="section flex flex--2 wrapper wrapper--sm-on-md intro">
+  
+  <div class="intro__image">
+    <img 
+    src="<?php echo esc_url( $intro['image']['sizes']['large'] ); ?>" 
+    alt="<?php echo esc_attr( $intro['image']['alt'] ); ?>"
+    >
+  </div>
 
-<img src="<?php echo $intro['image']['sizes']['large']; ?>" alt="<?php echo $intro['image']['alt']; ?>">
+  <div class="text-block intro__text">
+    <p class="accent-text"><?php echo esc_attr( $intro['accent_text'] ); ?></p>
+    <h2><?php echo esc_attr( $intro['title'] ); ?></h2>
+    <?php echo $intro['body']; ?>
+  </div>
 
-<hr><hr>
+</div>
+
+
 
 <!-- benefits -->
 
@@ -67,8 +73,7 @@ foreach($cards as $card) {
 <a href="<?php echo $benefits['link']['url']; ?>"><?php echo $benefits['link']['title']; ?></a>
 
 
-<hr><hr>
-
+<hr>
 <!-- benefits -->
 
 
@@ -85,7 +90,7 @@ foreach($doctor_cards as $card) {
     echo $card["picture"]["url"];
   }?>
 
-
+<hr>
   <!-- services -->
 
 
@@ -102,6 +107,7 @@ foreach($services_cards as $card) {
   }?>
 
 
+<hr>
 
   <!-- testimonials -->
 
