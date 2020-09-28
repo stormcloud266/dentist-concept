@@ -7,7 +7,7 @@ Project
   - src (this)
   - sql
 
-  Change project name in gulpfile.js and style.scss functions.php
-  Change flywheel url to browsersync url and port
-  Download ACF Pro from inside your account
-  Upload and activate it
+1. Change project name in gulpfile.js, style.scss, and functions.php
+2. Change flywheel url to browsersync url and port
+2. Download ACF Pro from inside your account
+2. sUpload and activate it
