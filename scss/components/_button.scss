@@ -8,13 +8,12 @@ button, .btn {
   color: $color-text-1;
   background-color: $buttonColor;
   border-radius: 50px;
-  border: 1px solid $color-text-5;
+  border: none;
   display: inline-block;
 }
 
 .btn {
   &--cta {
-    border-color: $ctaColor;
     background-color: $ctaColor;
     color: white;
     transition: border-color .3s, background-color .3s;
@@ -22,7 +21,6 @@ button, .btn {
 
     &:hover {
       color: white;
-      border-color: darken($ctaColor, 10%);
       background-color: darken($ctaColor, 10%);
     }
   }

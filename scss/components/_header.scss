@@ -95,10 +95,9 @@
     position: relative;
     z-index: 1000;
 
-    svg {
-      fill: $color-text-1;
+    img {
+      max-width: 18rem;
       width: 100%;
-      max-width: 15rem;
       display: block;
     }
   }
@@ -119,7 +118,7 @@
 
     &__nav-list {
       flex-direction: row !important;
-      font-size: inherit;
+      font-size: $font-0;
       display: flex;
 
 

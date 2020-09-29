@@ -11,8 +11,8 @@
 <header class="header">
       <div class="wrapper header__nav-container">
   
-        <a href="/" class="header__logo">
-        logo
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header__logo">
+          <img src="<?php echo home_url(); ?>/wp-content/uploads/2020/09/logo.png" alt="Logo" />
         </a>
   
         <button 
@@ -34,16 +34,16 @@
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/examples">Examples</a>
+              <a href="/examples">About Us</a>
             </li>
             <li>
-              <a href="/">Page</a>
+              <a href="/">Our Doctors</a>
             </li>
             <li>
-              <a href="/">Page</a>
+              <a href="/">Servics</a>
             </li>
             <li>
-              <a class="btn btn--cta btn--no-shadow btn--sm" href="/">Page</a>
+              <a class="btn btn--cta btn--no-shadow btn--sm" href="/">Book Now</a>
             </li>
           </ul>
         </nav>

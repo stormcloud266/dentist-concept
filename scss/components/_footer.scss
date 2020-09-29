@@ -41,6 +41,10 @@
     padding-bottom: $p-4;
   }
 
+  &__logo {
+    max-width: 24rem;
+  }
+
   &__nav,
   &__social {
 
@@ -51,7 +55,7 @@
     }
 
     li {
-      margin-right: $p-4;
+      margin-right: $p-6;
 
       &:last-child {
         margin-right: 0;
@@ -60,7 +64,17 @@
 
     a {
       color: $color-text-1;
+      transition: color .3s;
+      font-size: $font-0;
+
+      &:hover {
+       color: $color-blue-medium;
+      }
     }
+  }
+
+  &__social a {
+    color: $color-text-2;
   }
 
   &__bottom {
@@ -96,6 +110,7 @@
     &__bottom {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       text-align: left;
     }
 
