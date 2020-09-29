@@ -27,6 +27,14 @@ button, .btn {
     }
   }
 
+  &--no-shadow {
+    box-shadow: none;
+  }
+
+  &--sm {
+    padding: $p-1 $p-8;
+  }
+
   &--round {
     border-radius: 60px;
   }

@@ -11,3 +11,6 @@ Project
 2. Change flywheel url to browsersync url and port
 2. Download ACF Pro from inside your account
 2. sUpload and activate it
+
+__TODO__
+functions php needs project specific functions

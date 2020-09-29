@@ -1,134 +1,139 @@
-// .site-header {
-//   // make sure class "wrapper" exists
-//   // make sure media queries are set
 
-//   // remove to let menu scroll
-//   position: fixed;
-//   width: 100%;
-//   top: 0;
 
-//   background-color: steelblue;
-  
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: $p-2 0;
 
-//   &__nav {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
+  &__nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
-//     padding-top: 20px;
-//     padding-bottom: 20px;
-//   }
+  &__nav {
+    // positioning
+    background-color: #d7e5e6;
+    position: absolute;
+    top:0; left:0; right: 0;
+    min-height: 100vh;
 
-//   &__logo {
-//     min-width: 100px;
-//     max-width: 140px;
-//     display: block;
-//   }
+    // flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-//   &__list {
-//     display: flex;
+    // transition set up
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s;
 
-//     li { margin-left: 28px; }
+    &.open {
+      opacity: 1;
+      visibility: visible;
 
-//     a {
-//       color: white;
-//       transition: color .3s;
-//       &:hover, &:focus { color: turquoise; }
-//     }
-//   } // end of &__list
+      li {
+        transform: translateY(0);
+        opacity: 1;
+        transition: opacity .2s, transform .2s;
 
-//   &__menu-label, &__menu-toggle { display: none; }
+        &:nth-child(1) { transition-delay: .1s;}
+        &:nth-child(2) { transition-delay: .15s;}
+        &:nth-child(3) { transition-delay: .2s;}
+        &:nth-child(4) { transition-delay: .25s;}
+        &:nth-child(5) { transition-delay: .3s;}
+      }
+    }
+  } // end of &__nav
 
-//   @include whenSmall {
+  &__nav-list {
+    flex-direction: column;
+    align-items: center;
+    font-size: $font-3;
+    text-align: center;
 
-//     &__menu-label, &__menu-toggle { display: block; }
+    li {
+      margin-left: 0;
+      margin-bottom: $p-6;
+      opacity: 0;
+      transform: translateY(1rem);
+    }
 
-//     &__menu-toggle {
-//       position: absolute;
-//       left: -3000px;
-//     }
+    a:not(.btn) { 
+      padding: $p-1 $p-3;
+      color: $color-text-1;
+      font-weight: 500;
+      display: block;
+    }
+  }
 
-//     &__menu-label {
-//       cursor: pointer;
-//       position: relative;
-//       z-index: 10;
-//     }
+  #nav-toggle {
 
-//     &__logo {
-//       max-width: 70px;
-//       position: relative;
-//       z-index: 10;
-//     }
+    // overwrite default button styles
+    border: none;
+    padding: $p-1;
+    line-height: 1;
+    color: black;
+    background-color: transparent;
+    
+    // positioning
+    display: block;
+    position: relative;
+    z-index: 1000;
 
-//     &__list {
-//       background-color: darkorchid;
+    // changes icon on menu toggle
+    span { display: none; }
+    .show { display: block; }
+  }
 
-//       // animation set up
-//       visibility: hidden;
-//       opacity: 0;
-//       transition: all .2s;
-//       transition-delay: .5s;
+  &__logo {
+    position: relative;
+    z-index: 1000;
 
-//       position: absolute;
-//       min-height: 100vh;
-//       // fixed menu
-//       top:0;right:0;bottom:0;left:0;
-//       // scrolling menu
-//       // top:0;right:0;left:0;
+    svg {
+      fill: $color-text-1;
+      width: 100%;
+      max-width: 15rem;
+      display: block;
+    }
+  }
 
-//       text-align: center;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
+  @include whenLarge {
 
-//       li {
-//         margin-left: 0;
-//         margin-bottom: 36px;
-//         font-size: 24px;
-//         transition: all .2s;
-//         transition-delay: 0s;
-//       }
+    &__nav {
+      // positioning
+      // background-color: #d7e5e6;
+      background-color: transparent;
 
-//     }
+      position: relative;
+      top:unset; left:unset; right: unset;
+      min-height: unset;
+      opacity: 1;
+      visibility: visible;
+    }
 
-//     // menu functionality
-//     &__menu-toggle:focus + &__menu-label {
-//       color: turquoise;
-//     }
+    &__nav-list {
+      flex-direction: row !important;
+      font-size: inherit;
+      display: flex;
 
-//     &__menu-toggle:checked ~ &__list {
-//       visibility: visible;
-//       opacity: 1;
-//       transition-delay: 0s;      
-//     }
 
-//     // menu animations
-//     &__menu-toggle ~ &__list > li {
-//       transform: translateY(10px);
-//       opacity: 0;
-//       transition-delay: 0s;
+      li { 
+        margin-left: $p-8;
+        margin-bottom: 0;
+        opacity: 1 !important;
+        transform: translateY(0);
+      }
+    }
 
-//       // staggers li animations
-//       &:nth-child(1) { transition-delay: .3s; }
-//       &:nth-child(2) { transition-delay: .25s; }
-//       &:nth-child(3) { transition-delay: .20s; }
-//       &:nth-child(4) { transition-delay: .15s; }
-//       &:nth-child(5) { transition-delay: .1s; }
+    #nav-toggle {
+      display: none;
+    }
+  }
 
-//     }
-
-//     &__menu-toggle:checked ~ &__list > li {
-//       transform: translateY(0);
-//       opacity: 1;
-//       transition-delay: .2s;
-
-//       &:nth-child(1) { transition-delay: .1s; }
-//       &:nth-child(2) { transition-delay: .2s; }
-//       &:nth-child(3) { transition-delay: .3s; }
-//       &:nth-child(4) { transition-delay: .4s; }
-//       &:nth-child(5) { transition-delay: .5s; }
-//     }
-
-//   } // end of whenSmall
-
-// }
+}
