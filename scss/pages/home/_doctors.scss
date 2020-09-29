@@ -1,4 +1,6 @@
 .doctors {
   text-align: center;
 
+  @include circle(95rem, 5%, -35%)
+
 }

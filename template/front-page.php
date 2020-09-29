@@ -89,7 +89,7 @@ $testimonials = get_field('testimonials');
 
 <!-- doctors -->
 
-<section class="section wrapper doctors">
+<section class="section-top wrapper doctors">
 
   <p class="accent-text">
     <?php echo esc_attr( $doctors['accent_text'] ); ?>

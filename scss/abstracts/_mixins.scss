@@ -21,4 +21,25 @@
   max-width: 48rem;
   border-radius: 10px;
   overflow: hidden;
+  background-color: white;
+}
+
+@mixin circle($size, $pos-t, $pos-l) {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: none;
+    background-color: $color-blue-light;
+    height: calc(#{$size} * .9);
+    width: $size;
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+    top: $pos-t;
+    left: $pos-l;
+    @include whenMedium {
+      display: block;
+    }
+  }
 }

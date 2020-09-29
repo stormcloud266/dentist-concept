@@ -1,10 +1,13 @@
 .hero {
   display: flex;
   flex-direction: column;
-
+  
+  min-height: 100vh;
   padding-top: $p-9;
   padding-bottom: $p-9;
   text-align: center;
+
+  @include circle(110rem, -25%, 30%);
 
   &__image {
     margin-bottom: $p-8;
@@ -36,7 +39,7 @@
     }
 
     &__text h1 {
-      font-size: $font-6;
+      font-size: 5.4rem;
     }
 
     &__image {

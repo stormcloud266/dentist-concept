@@ -2,6 +2,32 @@
 
   &__image {
     margin-bottom: $p-9;
+    position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 10px;
+      }
+
+      &::before {
+        background-color: $color-blue-light;
+        height: 14rem;
+        width: 18rem;
+        top: -2rem;
+        right: -2rem;
+        z-index: -1;
+      }
+
+      &::after {
+        background-color: rgba($color-blue-medium, .4);
+        height: 9.5rem;
+        width: 9.5rem;
+        bottom: -2rem;
+        left: 0;
+      }
 
     img {
       border-radius: 10px;
@@ -17,6 +43,11 @@
 
     &__image {
       margin-bottom: 0;
+      padding-left: 2rem;
+    }
+
+    &__text {
+      padding-left: 2rem;
     }
 
   } // end of whenLarge

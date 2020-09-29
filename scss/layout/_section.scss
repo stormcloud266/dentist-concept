@@ -16,9 +16,9 @@
 
 @include whenLarge {
   .section {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
   }
-  .section-top { padding-top: 12rem; }
-  .section-bottom { padding-bottom: 12rem; }
+  .section-top { padding-top: 14rem; }
+  .section-bottom { padding-bottom: 14rem; }
 }
