@@ -1,0 +1,113 @@
+.footer {
+  background-color: $color-blue-light;
+
+  &__phone {
+    font-size: $font-6;
+    text-align: center;
+
+    span {
+      color: $color-text-0;
+    }
+  }
+
+  &__banner {
+    background-image: $color-gradient;
+    padding: $p-9 $p-7;
+    margin: $p-9 auto 10rem;
+    max-width: 60rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 18px -2px rgba($ctaColor, .4);
+    text-align: center;
+
+    h2 {
+      font-size: $font-2;
+      color: white;
+      margin-bottom: $p-4;
+    }
+
+    p {
+      color: #EFF0F1;
+      margin-bottom: $p-7;
+    }
+
+    a {
+      flex-shrink: 0;
+    }
+  } // end of banner
+
+  &__top {
+    text-align: center;
+    border-bottom: 1px solid #dee8ec;
+    padding-bottom: $p-4;
+  }
+
+  &__nav,
+  &__social {
+
+    ul {
+      display: flex;
+      justify-content: center;
+      margin-top: $p-3;
+    }
+
+    li {
+      margin-right: $p-4;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      color: $color-text-1;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    padding: $p-4 0;
+
+    p {
+      font-size: $font-0;
+    }
+  }
+
+  @include whenLarge {
+    
+    &__banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 100px;
+      text-align: left;
+      max-width: 100rem;
+      padding: $p-7 $p-9;
+
+      h2 {
+        margin-bottom: $p-2;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &__top, 
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    &__nav ul,
+    &__social ul {
+      margin-top: 0;
+    }
+
+    &__nav li {
+      margin-left: $p-9;
+      margin-right: 0;
+    }
+
+  } // end of whenLarge
+}

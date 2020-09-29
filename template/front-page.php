@@ -203,7 +203,4 @@ $testimonials = get_field('testimonials');
 </section>
 
 
-<div class="section"></div>
-
-
 <?php get_footer(); ?>
