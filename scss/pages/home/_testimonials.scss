@@ -22,6 +22,24 @@
     }
   }
 
+  &__testimonial {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+
+  &__buttons button {
+    padding: $p-1 $p-4;
+    border-radius: 2px;
+    color: white;
+    background-color: rgba($color-blue-light, .2);
+
+    &:first-child {
+      margin-right: $p-9;
+    }
+  }
+
   @include whenMedium {
 
     &__text {
@@ -39,9 +57,16 @@
     }
 
     &__right {
-      min-height: 400px;
+      min-height: 50rem;
       display: flex;
       align-items: center;
+    }
+
+    &__text {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   } // end of whenLarge
 }

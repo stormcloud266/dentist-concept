@@ -192,9 +192,8 @@ $testimonials = get_field('testimonials');
       <?php } ?>
 
       <div class="testimonials__buttons">
-        <button>&lt;</button>
-        ...
-        <button>&gt;</button>
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
       </div>
 
     </div>
