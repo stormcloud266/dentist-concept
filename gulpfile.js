@@ -118,7 +118,7 @@ gulp.task('js', () => {
   return gulp.src(js.src)
     .pipe(deporder())
     .pipe(concat(js.filename))
-    .pipe(stripdebug())
+    // .pipe(stripdebug())
     .pipe(babel({
       presets: ['@babel/env']
     }))

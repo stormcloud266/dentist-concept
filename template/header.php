@@ -28,7 +28,7 @@
 
         </button>
   
-        <nav class="header__nav">
+        <nav class="header__nav" id="nav">
           <ul class="header__nav-list">
             <li>
               <a href="/">Home</a>
