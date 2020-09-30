@@ -21,8 +21,14 @@
     font-size: $font-5;
   }
 
-  &__buttons .btn {
-    margin-right: $p-4;
+  &__buttons {
+
+    & a:not(.btn) {
+      color: $color-text-1;
+    }
+    .btn {
+      margin-right: $p-4;
+    }
   }
 
   @include whenLarge {

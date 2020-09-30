@@ -1,13 +1,10 @@
 .testimonials {
+  background-color: $color-blue-gray;
 
   &__image {
     min-height: 32rem;
     background-size: cover;
     background-position: center;
-  }
-
-  &__right {
-    background-color: $color-blue-gray;
   }
 
   &__text {
@@ -57,7 +54,7 @@
     }
 
     &__right {
-      min-height: 50rem;
+      min-height: 44rem;
       display: flex;
       align-items: center;
     }

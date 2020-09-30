@@ -148,12 +148,12 @@ $testimonials = get_field('testimonials');
         <li class="services__item">
           
           <div class="image-container">
-            <img src="<?php echo esc_url( $card["icon"]["sizes"]["medium"] ); ?>" alt="">
+            <img src="<?php echo esc_url( $item["icon"]["sizes"]["medium"] ); ?>" alt="">
           </div>
 
           <div class="services__text">
-            <h3><?php echo esc_attr( $card["card_title"] ); ?></h3>
-            <p><?php echo esc_attr( $card["card_body"] ); ?></p>
+            <h3><?php echo esc_attr( $item["card_title"] ); ?></h3>
+            <p><?php echo esc_attr( $item["card_body"] ); ?></p>
           </div>
         </li>
 

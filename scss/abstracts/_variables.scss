@@ -3,14 +3,6 @@ $color-text-0: #25404F;
 $color-text-1: #3B5360;
 $color-text-2: #5F7682;
 $color-text-3: #666666;
-$color-text-4: #888888;
-$color-text-5: #BBBBBB;
-$color-text-6: #DDDDDD;
-$color-text-7: #FFFFFF;
-
-$color-bg-0: #FFFFFF;
-$color-bg-1: #F1F1F1;
-$color-bg-dark: #222222;
 
 $color-cta: #318787;
 
@@ -21,7 +13,7 @@ $color-blue-gray: #758E9B;
 
 $color-gradient: linear-gradient(60deg, #35B7B7, #258BC7);
 
-$link-color: #0d83a0;
+$link-color: #1a71a5;
 $link-highlight-color: lighten($link-color, 20%);
 
 
@@ -35,7 +27,6 @@ $font-3: 2.6rem;
 $font-4: 3.1rem;
 $font-5: 3.7rem;
 $font-6: 4.4rem;
-
 
 // spacing
 
@@ -53,6 +44,3 @@ $p-10: 5.4rem;
 $p-11: 6.4rem;
 $p-12: 7.7rem;
 $p-13: 9.2rem;
-
-$gap-flex: $p-7;
-$gap-flex-sm: $p-4;

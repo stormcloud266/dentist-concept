@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  
+
   // navigation
   const button = document.getElementById("nav-toggle")
   const nav = document.getElementById("nav")
