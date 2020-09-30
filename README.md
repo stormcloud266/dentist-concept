@@ -1,6 +1,20 @@
 # dentist-concept
 
+This is a concept project built to practice developing a small business website with WordPress.
+
 ![](https://github.com/stormcloud266/dentist-concept/blob/master/screenshot.gif)
+
+## Challenges and Goals
+
+* Create a simple, one page website on Wordpress
+* Make content easily editable from the admin dashboard
+* Set up a local development environment an automated workflow
+
+## Solutions
+
+I used gulp.js to create an automated workflow with minifying, photo optimization, scss, and live reloading. This setup allowed me to build more quickly and efficiently.
+
+I integrated the Advanced Custom Fields plugin for easy content editing from the WordPress admin dashboard. The template then pulls down and escapes this information using PHP. The website is styled using SCSS. 
 
 ## Startup Guide
 
