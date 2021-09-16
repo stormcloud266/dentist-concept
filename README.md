@@ -1,6 +1,6 @@
 # dentist-concept
 
-This is a concept project built to practice developing a small business website with WordPress.
+Dentist Concept is a concept small business website built from the ground up using WordPress and ACF Pro.
 
 ![](https://github.com/stormcloud266/dentist-concept/blob/master/screenshot.gif)
 
